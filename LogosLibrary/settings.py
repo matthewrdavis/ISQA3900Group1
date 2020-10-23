@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = ''
+STATIC_ROOT = '/home/ISQA3900group1/isqa3900group1.pythonanywhere.com/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     '/var/www/static/',
