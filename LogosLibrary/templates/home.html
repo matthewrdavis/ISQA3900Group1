@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    {% block title %}Home{% endblock title %}
+
+    {% block content %}
+        <div id="aboutUsDescription" class="aboutUsPage">
+            <h1>About Us</h1>
+            <p>Logos Library is a public library that delivers e-content to members. Membership is free for users living in
+            the United States, and allows you to check out items for 2 weeks at a time. Because Logos Library delivers
+            content electronically, items are automatically returned on their due date. This means Logos Library does not
+            charge late fees to its members.</p>
+        </div>
+        <div id="servicesList" class="aboutUsPage">
+            <h1>Services</h1>
+            <ul id="aboutUsServices">
+                <li><a href="{% url 'book_list' %}"><img class="listPicture" src="{% static "images/Book_Icon.png" %}"></a></li>
+                <li><a href="{% url 'movie_list' %}"><img class="listPicture" src="{% static "images/Movie Icon.png" %}"></a></li>
+                <li><a href="{% url 'magazine_list' %}"><img class="listPicture" src="{% static "images/Magazine Icon.png" %}"></a></li>
+            </ul>
+        </div>
+    {% endblock content %}
+</html>

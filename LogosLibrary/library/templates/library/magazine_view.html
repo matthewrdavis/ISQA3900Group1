@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   {% extends 'base.html' %}
+    {% load static %}
+    {% block title %}Magazine View{% endblock title %}
+
+    {% block content %}
+    <div class="row">
+        <h2 style="padding-left: 15Px">Magazines</h2>
+    </div>
+
+    <div class="productPage">
+        <main>
+
+
+            <img src="{% static 'images/Magazine Icon.png' %}" alt="stock magazine" width="400" height="400">
+
+            <p><span class="book"> {{ magazines.magazine_name }} </span></p>
+            <p1>Quantity:  {{ magazines.quantity }}</p1><br><br>
+            <button type="button">Add to Cart</button><br><br><br>
+            <ul>
+                <li>Language:  </li><p1>{{ magazines.language }}</p1><br><br>
+                <li>Genre:  </li><p1>{{ magazines.genre }}</p1><br><br>
+                <li>Country:  </li><p1>{{ magazines.country }}</p1><br><br><br><br><br>
+            </ul>
+
+            <p2>Description:</p2><br>
+            <p1>{{ movies.movie_description }}</p1>
+
+        </main>
+
+    </div>
+
+
+
+    {% endblock content %}
+</html>

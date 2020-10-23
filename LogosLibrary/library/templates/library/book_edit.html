@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+    <div class="listPage">
+    <h1>Edit Book</h1>
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+
+    </div>
+{% endblock %}
+
+</html>

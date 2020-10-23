@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block body_block %}
+    <h1>Delete {{ book.name }}?</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+        <a href="{% url 'book_list' pk=book.book_name %} ">Cancel</a>
+    </form>
+
+{% endblock %}
+
+</html>

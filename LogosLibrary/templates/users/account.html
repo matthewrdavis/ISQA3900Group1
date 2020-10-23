@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'base.html' %}
+
+    {% block title %}Account{% endblock title %}
+
+    {% block content %}
+
+    <h1>This is account.html</h1>
+        <table border="1">
+            <tr>
+                <td>Username</td>
+                <td>Email</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Department</td>
+                <td>Employee Cell Phone</td>
+            </tr>
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.department }}</td>
+                <td>{{ user.employee_cell_phone }}</td>
+                <td><a href="{% url 'users:account_edit' pk=user.pk %}">Edit Account</a></td>
+            </tr>
+        </table>
+    {% endblock content %}
+</html>

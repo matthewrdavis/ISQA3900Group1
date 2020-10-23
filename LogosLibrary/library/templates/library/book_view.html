@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   {% extends 'base.html' %}
+    {% load static %}
+    {% block title %}Book View{% endblock title %}
+
+    {% block content %}
+    <div class="row">
+        <h2 style="padding-left: 15Px">Books</h2>
+    </div>
+
+    <div class="productPage">
+        <main>
+
+
+            <img src="{% static 'images/Book_Icon.png' %}" alt="stock book" width="400" height="400">
+
+            <p><span class="book"> {{ books.book_name }} </span></p>
+            <p1>Quantity:  {{ books.quantity }}</p1><br><br>
+            <button type="button">Add to Cart</button><br><br><br>
+            <ul>
+                <li>Language:  </li><p1>{{ books.language }}</p1><br><br>
+                <li>Genre:  </li><p1>{{ books.genre }}</p1><br><br>
+                <li>Awards:  </li><p1>{{ books.awards }}</p1><br><br>
+                <li>ISBN:  </li><p1>{{ books.isbn }}</p1><br><br>
+            </ul>
+
+            <p2>Description:</p2><br>
+            <p1>{{ books.book_description }}</p1>
+
+        </main>
+
+    </div>
+
+
+
+    {% endblock content %}
+</html>

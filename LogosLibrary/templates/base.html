@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <title>{% block title %}{% endblock %}</title>
+      <link href="{% static "css/style3.css" %}" rel="stylesheet">
+  </head>
+  <body>
+  {% if user.is_authenticated %}
+    <nav class="navigationBar">
+        <div class="logo">
+            <a href="/"><img id="navBarLogo" src="{% static "images/LogosLibrary.png" %}"></a>
+        </div>
+        <div class="navigationBarLinks">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/book_list">Books</a></li>
+                <li><a href="/magazine_list">Magazines</a></li>
+                <li><a href="/movie_list">Movies</a></li>
+                <li><a href="{% url 'users:account' pk=user.pk %}"><img id="navBarAccount" src="{% static "images/Account Icon.png" %}"></a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+        </div>
+    </nav>
+  {% else %}
+    <nav class="navigationBar">
+        <div class="logo">
+            <a href="/"><img id="navBarLogo" src="{% static "images/LogosLibrary.png" %}"></a>
+        </div>
+        <div class="navigationBarLinks">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/book_list">Books</a></li>
+                <li><a href="/magazine_list">Magazines</a></li>
+                <li><a href="/movie_list">Movies</a></li>
+                <li><a href="{% url 'login' %}" class="btn btn-outline-secondary">Log In</a></li>
+                <li><a href="{% url 'users:signup' %}" class="btn btn-primary ml-2">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+  {% endif %}
+    <nav class="searchBar">
+
+    </nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>

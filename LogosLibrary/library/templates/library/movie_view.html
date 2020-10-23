@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   {% extends 'base.html' %}
+    {% load static %}
+    {% block title %}Movie View{% endblock title %}
+
+    {% block content %}
+    <div class="row">
+        <h2 style="padding-left: 15Px">Movies</h2>
+    </div>
+
+    <div class="productPage">
+        <main>
+
+
+            <img src="{% static 'images/Movie Icon.png' %}" alt="stock movie" width="400" height="400">
+
+            <p><span class="book"> {{ movies.movie_name }} </span></p>
+            <p1>Quantity:  {{ movies.quantity }}</p1><br><br>
+            <button type="button">Add to Cart</button><br><br><br>
+            <ul>
+                <li>Language:  </li><p1>{{ movies.language }}</p1><br><br>
+                <li>Subject:  </li><p1>{{ movies.subject }}</p1><br><br>
+                <li>Series:  </li><p1>{{ movies.series }}</p1><br><br><br><br><br>
+            </ul>
+
+            <p2>Description:</p2><br>
+            <p1>{{ movies.movie_description }}</p1>
+
+        </main>
+
+    </div>
+
+
+
+    {% endblock content %}
+</html>

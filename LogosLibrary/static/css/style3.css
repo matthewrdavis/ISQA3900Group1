@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+
+.navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D3D3D3;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.navigationBarLinks ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navigationBarLinks li {
+    list-style: none;
+}
+.navigationBarLinks li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 1rem;
+    display: block;
+}
+.navigationBarLinks li:hover {
+    background-color: #FFFFFF;
+}
+#navBarLogo {
+    height: 39px;
+}
+#navBarAccount {
+    height: 20px;
+}
+
+/* About Us */
+
+.aboutUsPage {
+    margin: auto;
+    width: 66%;
+    padding: 10px;
+    text-align: center;
+}
+.aboutUsPage ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.aboutUsPage li {
+    list-style: none;
+}
+.aboutUsPage li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 1rem;
+    display: block;
+}
+.aboutUsPage li:hover {
+    background-color: #D3D3D3;
+}
+.aboutUsPage h1 {
+    border-bottom: 2px solid #D3D3D3;
+}
+
+#aboutUsServices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: auto;
+    width: 66%;
+}
+
+/* List Page */
+
+.listPage {
+    padding-left: 20px;
+    padding-right: 20px;
+	background-color: #FFFFFF;
+	margin-left: 170px;
+    margin-right: 170px;
+	padding-top: 1px;
+	padding-bottom: 1px
+}
+
+/* Product Page */
+
+.productPage {
+    padding-left: 20px;
+    padding-right: 20px;
+	background-color: #FFFFFF;
+	margin-left: 170px;
+    margin-right: 170px;
+	padding-top: 1px;
+	padding-bottom: 1px
+
+}
+
+.productPage img {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.productPage p {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.productPage p1 {
+    color: #000000;
+    font-size: 20px;
+}
+
+.productPage p2 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.productPage li {
+    color: #000000;
+    font-size: 20px;
+    list-style-type: none;
+    font-weight: bold;
+}
